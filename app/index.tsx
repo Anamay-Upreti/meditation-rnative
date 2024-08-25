@@ -2,8 +2,8 @@ import { View, Text, StyleSheet } from "react-native";
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text>HI</Text>
+    <View className="flex-1 justify-center items-center">
+         <Text>Hi there!</Text>
     </View>
   );
 }
