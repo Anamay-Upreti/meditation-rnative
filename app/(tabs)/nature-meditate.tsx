@@ -1,6 +1,9 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import AppGradient from '@/components/AppGradient'
+import { FlatList } from 'react-native-gesture-handler'
+import { MEDITATION_DATA } from '@/constants/MeditationData'
+
 
 const natureMeditate = () => {
   return (
@@ -11,6 +14,14 @@ const natureMeditate = () => {
         <Text>
           Start your meditation practice 
         </Text>
+        </View>
+        <View>
+          <FlatList data={MEDITATION_DATA} className='mb-20 'keyExtractor={(item) => item.id.toString()}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item}) => (
+            
+          )}
+          />
         </View>
       
       </AppGradient>
